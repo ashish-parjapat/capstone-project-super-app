@@ -1,0 +1,103 @@
+#superApp{
+    margin-top: 25px;
+    /* margin-left: 120px; */
+    font-family: 'Single Day', cursive;
+font-style: normal;
+font-weight: 400;
+font-size: 67px;
+line-height: 139.69%;
+/* identical to box height, or 94px */
+
+
+color: #72DB73;
+}
+#message{
+    color: #FFFFFF;
+    font-size: 25px;
+    margin-top: 0px;
+}
+#emailgoogle{
+    margin-top: 0px;
+    font-family: 'DM Sans', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 29.8485px;
+line-height: 139.69%;
+
+
+/* or 40px */
+
+
+color: #FFFFFF;
+
+}
+.forminput{
+
+    width: 350px;
+height: 45.87px;
+    background: #292929;
+border-radius: 3.81584px;
+ 
+    margin-top: 10px;
+}
+
+.footer{
+    margin-bottom: 35px;
+}
+span{
+    font-family: 'DM Sans', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 20.0331px;
+line-height: 139.69%;
+/* or 28px */
+
+letter-spacing: 0.02em;
+
+color: #7C7C7C;
+}
+.signup{
+    background: #72DB73;
+    border-radius: 33px;
+    width: 500px;
+height: 45px;
+/* margin-top: 35px;
+margin-left: 47px; */
+
+/* left: 439px;
+top: 75px; */
+color: #ffff;
+}
+.termsprivacy {
+    font-family: 'Roboto', sans-serif;
+ 
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 141.7%;
+
+/* or 26px */
+
+letter-spacing: 0.02em;
+color: #7C7C7C;
+}
+.termsprivacy p+p{
+    margin-top: 5px;
+
+}
+a{
+    color: #72DB73;
+}
+input{
+    background: #292929;
+    border-radius: 3.81584px;
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+.error{
+    color: #cc0033;
+  display: flex;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 5px 0 0;
+}
