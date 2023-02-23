@@ -1,35 +1,36 @@
 import React,{useEffect, useState} from 'react'
+import{Formik, useFormik} from 'formik'
 import styles from "./right.module.css"
 import Form from './form'
 function RightBanner() {
 
 
-    const[formValues,setFormValues]=useState({name:'',username:'',email:'',phone:''})
+//     const[formValues,setFormValues]=useState({name:'',username:'',email:'',phone:''})
 
-    const handleChange=(e)=>{
-    // console.log(e.target.name)
-    // console.log(e.target.value)
-    // console.log(typeof formValues);
- setFormValues({...formValues,[e.target.name]:e.target.value})
+//     const handleChange=(e)=>{
+//     // console.log(e.target.name)
+//     // console.log(e.target.value)
+//     // console.log(typeof formValues);
+//  setFormValues({...formValues,[e.target.name]:e.target.value})
  
-//  console.log(formValues);
+// //  console.log(formValues);
 
 
-    // console.log(setFormValues(...formValues));
+//     // console.log(setFormValues(...formValues));
 
-  //   if(formValues.email===null){
-  //     setEmailError('Enter email ')
-  //   }
-  //  else if(!/\S+@\S+\.\S+/.test(formValues.email)){
-  //   setEmailError('Enter valid email')
-  //  }else{
-  //   setEmailError(null)
-  //  }
+//   //   if(formValues.email===null){
+//   //     setEmailError('Enter email ')
+//   //   }
+//   //  else if(!/\S+@\S+\.\S+/.test(formValues.email)){
+//   //   setEmailError('Enter valid email')
+//   //  }else{
+//   //   setEmailError(null)
+//   //  }
     
 
-    }
-    console.log(formValues.name);
-    // console.log(form);
+//     }
+//     console.log(formValues.name);
+//     // console.log(form);
 
 
 
@@ -43,27 +44,95 @@ function RightBanner() {
       setCheckBox(!checkBox)
     
     }
-    // console.log(checkBox);
-    const[error,setError]=useState('')
-    const handleSubmit=()=>{
-      if(formValues.name&&formValues.username&&formValues.email&&formValues.phone!=null&&checkBox){
-alert("Register successfully")
-      } if(formValues.name===''){
-      setError("Name is a required field.")
-      }
-      if(formValues.username===''){
-        setError("Username is a required field." )
-        }
-         if(formValues.email===''){
-          setError("email is a required field." )
-          }
-           if(formValues.phone===''){
-            setError("Phone is a required field." )
-            }
+//     // console.log(checkBox);
+//     const[error,setError]=useState('')
+//     const handleSubmit=()=>{
+//       if(formValues.name&&formValues.username&&formValues.email&&formValues.phone!=null&&checkBox){
+// alert("Register successfully")
+//       } if(formValues.name===''){
+//       setError("Name is a required field.")
+//       }
+//       if(formValues.username===''){
+//         setError("Username is a required field." )
+//         }
+//          if(formValues.email===''){
+//           setError("email is a required field." )
+//           }
+//            if(formValues.phone===''){
+//             setError("Phone is a required field." )
+//             }
             
 
 
-    }
+//     }
+
+
+const  initialValues={
+  name:'',
+  username:'',
+  email:'',
+  phone:'',
+  checkBox:false
+
+}
+const  onSubmit= values =>{
+  console.log(values);
+  console.log(typeof values);
+  alert("Register successfuly")
+  window.location.reload(); 
+}
+
+
+const validate= values=>{
+  const errors={}
+  if(!values.name){
+    errors.name='Required'
+  }
+
+
+  if(!values.username){
+    errors.username='Required'
+  }
+  if(!values.email){
+    errors.email='Required'
+  }else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+         errors.email = 'Invalid email format'
+     }
+  
+  if(!values.phone){
+    errors.phone='Required'
+  }
+  if(!values.checkBox){
+    errors.checkBox='Required'
+  }
+
+
+  
+  
+
+  return errors
+}
+
+
+            const formik =useFormik({
+              initialValues,
+              onSubmit,
+              validate
+             
+             
+           
+
+
+
+            })
+            // console.log(formik.to);
+
+
+
+
+
+
+
 
 
 
@@ -89,38 +158,76 @@ alert("Register successfully")
         <button> Google</button> 
         </div>
       </div>
+      <form onSubmit={formik.handleSubmit}>
       <div className='grid grid-rows-4  items-center justify-center' >
+
+   
     <div >
-        <input type="text"  name='name'  required placeholder='Name' value={formValues.name} className='form-input px-4 py-3 '  onChange={handleChange} />
-        {/* <span className={styles.error}>{}</span> */}
+        <input type="text" 
+         name='name'  required 
+         placeholder='Name' 
+         value={formik.values.name} 
+         className='form-input px-4 py-3 '  
+         onChange={formik.handleChange} 
+         onBlur={formik.handleBlur}
+         />
+     
+        { formik.touched.name &&  formik.errors.name ? <span className={styles.error}>{formik.errors.name}</span>: null}
     </div>
     <div>
-        <input type="text"  name='username' value={formValues.username}   required placeholder='Username' className='form-input px-4 py-3'  onChange={handleChange}/>
-        {/* <span className={styles.error}>{error}</span> */}
+        <input type="text"  name='username' 
+        value={formik.values.username}  
+         required placeholder='Username' 
+         className='form-input px-4 py-3'  
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          />
+        {formik.touched.username  &&   formik.errors.username ? <span className={styles.error}>{formik.errors.username}</span>: null}
     </div>
     <div>
-        <input type="email" name='email' value={formValues.email}  required placeholder='Email' className='form-input px-4 py-3' onChange={handleChange}/>
-        {/* <span className={styles.error}>{error}</span> */}
+        <input type="email" name='email' 
+        value={formik.values.email}   required 
+        placeholder='Email' 
+        className='form-input px-4 py-3'  
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}/>
+        {formik.touched.email &&   formik.errors.email ? <span className={styles.error}>{formik.errors.email}</span>: null}
        
     </div>
     <div>
-        <input type="tel"  required  name='phone' value={formValues.phone}   placeholder='Phone' minLength={10} maxLength={10}  className='form-input px-4 py-3' onChange={handleChange}/>
-        {/* <span className={styles.error}>{error}</span> */}
+        <input type="tel"  required  
+        name='phone' 
+        value={formik.values.phone}   
+        placeholder='Phone' minLength={10} maxLength={10}  
+        className='form-input px-4 py-3' 
+         onChange={formik.handleChange}
+         onBlur={formik.handleBlur}
+         />
+        {formik.touched.phone && formik.errors.phone ? <span className={styles.error}>{formik.errors.phone}</span>: null}
     </div>
 
 
    </div>
+ 
     
      <div className="flex  items-center justify-center" style={{marginTop:'20px'}}>
-  <input type="checkbox" className="form-checkbox h-4 w-4 text-blue-600" onClick={tick} />
+  <input type="checkbox" name='checkBox' 
+  className="form-checkbox h-4 w-4 text-blue-600" 
+  value={formik.values.checkBox}
+  onChange={formik.handleChange}
+  onBlur={formik.handleBlur}
+  
+  />
+     {formik.touched.checkBox && formik.errors.checkBox ? <span className={styles.error}>{formik.errors.checkBox}</span>: null}
   <span className="ml-2 text-gray-700">Share my registration data with Superapp</span>
 </div>
 <div>
 
 </div>
 <div className='flex  items-center justify-center ' style={{marginTop:'40px'}}>
-  <button type='submit' className={styles.signup} onClick={handleSubmit}>Sign Up</button>
+  <button type='submit' className={styles.signup} >Sign Up</button>
 </div>
+</form>
 
 <div className={styles.termsprivacy}>
   <p>By clicking on Sign up. you agree to Superapp<a href='#'>Terms and Conditions of Use</a> </p>
