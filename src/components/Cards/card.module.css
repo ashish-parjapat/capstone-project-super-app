@@ -1,0 +1,30 @@
+
+
+.container{
+    /* display: flex; */
+    /* justify-content: center; */
+}
+.card{
+    box-sizing: border-box;
+    width: 150px;
+height: 150px;
+    background: #FF5209;
+border: 6px solid #11B800;
+border-radius: 20px;
+}
+.header{
+    font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 47px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+}
+.img{
+     /* background: url(./images/johnWick.jpg); */
+filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.55));
+border-radius: 11.6612px;
+}

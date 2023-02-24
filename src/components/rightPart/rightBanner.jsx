@@ -1,70 +1,10 @@
-import React,{useEffect, useState} from 'react'
+import React from 'react'
 import{Formik, useFormik} from 'formik'
 import styles from "./right.module.css"
-import Form from './form'
+import {BrowserRouter,Routes,Route, NavLink, Link} from "react-router-dom"
+
 function RightBanner() {
 
-
-//     const[formValues,setFormValues]=useState({name:'',username:'',email:'',phone:''})
-
-//     const handleChange=(e)=>{
-//     // console.log(e.target.name)
-//     // console.log(e.target.value)
-//     // console.log(typeof formValues);
-//  setFormValues({...formValues,[e.target.name]:e.target.value})
- 
-// //  console.log(formValues);
-
-
-//     // console.log(setFormValues(...formValues));
-
-//   //   if(formValues.email===null){
-//   //     setEmailError('Enter email ')
-//   //   }
-//   //  else if(!/\S+@\S+\.\S+/.test(formValues.email)){
-//   //   setEmailError('Enter valid email')
-//   //  }else{
-//   //   setEmailError(null)
-//   //  }
-    
-
-//     }
-//     console.log(formValues.name);
-//     // console.log(form);
-
-
-
-  
-
-  
-
-    const[checkBox,setCheckBox]=useState(false);
-
-    const tick=()=>{
-      setCheckBox(!checkBox)
-    
-    }
-//     // console.log(checkBox);
-//     const[error,setError]=useState('')
-//     const handleSubmit=()=>{
-//       if(formValues.name&&formValues.username&&formValues.email&&formValues.phone!=null&&checkBox){
-// alert("Register successfully")
-//       } if(formValues.name===''){
-//       setError("Name is a required field.")
-//       }
-//       if(formValues.username===''){
-//         setError("Username is a required field." )
-//         }
-//          if(formValues.email===''){
-//           setError("email is a required field." )
-//           }
-//            if(formValues.phone===''){
-//             setError("Phone is a required field." )
-//             }
-            
-
-
-//     }
 
 
 const  initialValues={
@@ -75,12 +15,13 @@ const  initialValues={
   checkBox:false
 
 }
-const  onSubmit= values =>{
+
+   const  onSubmit= values =>{
   console.log(values);
-  console.log(typeof values);
-  alert("Register successfuly")
-  window.location.reload(); 
+  // console.log(typeof values);
+  <Link to="category"/>
 }
+
 
 
 const validate= values=>{
@@ -158,7 +99,14 @@ const validate= values=>{
         <button> Google</button> 
         </div>
       </div>
+
+
       <form onSubmit={formik.handleSubmit}>
+
+
+
+
+
       <div className='grid grid-rows-4  items-center justify-center' >
 
    
@@ -225,7 +173,10 @@ const validate= values=>{
 
 </div>
 <div className='flex  items-center justify-center ' style={{marginTop:'40px'}}>
+
   <button type='submit' className={styles.signup} >Sign Up</button>
+
+
 </div>
 </form>
 
