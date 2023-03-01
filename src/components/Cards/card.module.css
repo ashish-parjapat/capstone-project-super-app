@@ -1,30 +1,42 @@
 
 
 .container{
-    /* display: flex; */
-    /* justify-content: center; */
+ 
+ width: 100%;
+/* background-color: black; */
+    margin-top: 55px;
 }
 .card{
     box-sizing: border-box;
     width: 150px;
 height: 150px;
-    background: #FF5209;
-border: 6px solid #11B800;
+ 
+
 border-radius: 20px;
+margin-right: 10px;
+
 }
-.header{
+.title{
     font-family: 'DM Sans';
 font-style: normal;
 font-weight: 500;
-font-size: 36px;
+font-size: 26px;
 line-height: 47px;
+margin-left: 10px;
+margin-bottom: 5px;
 /* identical to box height */
 
 
 color: #FFFFFF;
 }
 .img{
-     /* background: url(./images/johnWick.jpg); */
+     
 filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.55));
-border-radius: 11.6612px;
+border-radius: 12.6612px;
+width: 109px;
+height: 58px;
+margin-left: 10px;
+margin-top: 30px;
+margin-right: 10px;
+margin-bottom: 20px;
 }

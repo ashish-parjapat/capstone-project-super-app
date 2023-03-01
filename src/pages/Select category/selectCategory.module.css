@@ -1,0 +1,48 @@
+.container{
+    margin-top: 55px;
+}
+
+#superApp{
+    margin-top: 25px;
+    /* margin-left: 120px; */
+    font-family: 'Single Day', cursive;
+font-style: normal;
+font-weight: 400;
+font-size: 67px;
+line-height: 139.69%;
+margin-left: 2px;
+/* identical to box height, or 94px */
+
+
+color: #72DB73;
+}
+#choose{
+    margin-left: 20px;
+    margin-top: 85px;
+    width: 300px;
+height: 216px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 139.69%;
+    /* or 95px */
+    
+    
+    color:  black;
+}
+.addedItem{
+    
+        background: #72DB73;
+        border-radius: 33px;
+        width: 120px;
+    height: 40px;
+    margin-top: 35px;
+    margin-left: 47px;
+    margin-right: 20px;
+    /* padding-right: 220px; */
+
+    /* left: 439px;
+    top: 75px; */
+    color: black
+}

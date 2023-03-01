@@ -1,47 +1,46 @@
+// import johnwick from './images/johnwick.jpg'
 
-import "./images"
-
-
+import {johnwick,alka,avatar,conq,rajkumar,srk,tony,vijay,fantasy} from "./images/index.js"
+// const myImage = new Image();
+// myImage.src = 'images/johnwick.jpg'
 const content=[
     {
         Header:"Action",
-        image: "./images/johnWick.jpg"
-    },
-    {
-        Header:"Action",
-        image: "super-app/my-app/src/components/Cards/images/image 3.jpg"
+        image: johnwick,
+        background:'#FF5209'
     },
     {
         Header:"Drama",
-        image: "super-app/my-app/src/components/Cards/images/image 4.jpg"
+        image: alka
     },
+   
     {
         Header:"Romance",
-        image: "super-app/my-app/src/components/Cards/images/image 5.jpg"
+        image: srk
     },
     {
         Header:"Thiller",
-        image: "super-app/my-app/src/components/Cards/images/image 6.jpg"
+        image: vijay
     },
     {
         Header:"Western",
-        image: "super-app/my-app/src/components/Cards/images/image 7.jpg"
+        image: tony
     },
     {
         Header:"Horror",
-        image: "super-app/my-app/src/components/Cards/images/image 8.jpg"
+        image: conq
     },
     {
         Header:"Fanstasy",
-        image: "super-app/my-app/src/components/Cards/images/image 9.jpg"
+        image: fantasy
     },
     {
         Header:"Music",
-        image: "super-app/my-app/src/components/Cards/images/image 10.jpg"
+        image: rajkumar
     },
     {
         Header:"Fiction",
-        image: "super-app/my-app/src/components/Cards/images/image 11.jpg"
+        image: avatar
     },
 
 

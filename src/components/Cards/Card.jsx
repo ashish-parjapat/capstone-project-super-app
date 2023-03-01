@@ -1,24 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './card.module.css'
 import content from './contents'
-function Card() {
+function Card(props) {
+
+ 
+
+
   return (
+
     <div className={styles.container} >
-       <div className={styles.card}>
-        <div className={styles.header}>
-            <h4>{content[0].Header}</h4>
+      <button type='select' onClick={props.onClicked}>
+      
+             <div className={styles.card } style={{background:props.background,border:props.border}} >
+
+      
+        <div className={styles.title} >
+            <h4>{props.title} </h4>
 
         </div>
         <div className={styles.img}>
-     
-   <img src={content[0].image}/>
-  { console.log(content[0])}
+ 
+
+
+     <img src={props.screen}    />
+ 
+ 
         </div>
 
 
        </div>
      
-
+       </button>
 
     </div>
   )
