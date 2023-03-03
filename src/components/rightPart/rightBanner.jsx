@@ -1,9 +1,22 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import{Formik, useFormik} from 'formik'
 import styles from "./right.module.css"
 import {BrowserRouter,Routes,Route, NavLink, Link} from "react-router-dom"
 
 function RightBanner() {
+
+  const getDataFromLs=()=>{
+    const data=localStorage.getItem('formData')
+    if(data){
+      return JSON.parse(data);
+    }else{
+      return []
+    }
+  }
+
+
+
+
 
 
 
@@ -16,11 +29,34 @@ const  initialValues={
 
 }
 
+// useEffect(()=>{
+//   localStorage.setItem("formData", initialValues);
+// },[])
+
+
+const[formValues,setFormValues]=useState([])
    const  onSubmit= values =>{
   console.log(values);
-  // console.log(typeof values);
-  <Link to="category"/>
+  console.log(typeof values)
+  // const formdata=[values.name,values.username,values.email,values.phone]
+  localStorage.setItem('name',values.name)
+  localStorage.setItem('username',values.username)
+  localStorage.setItem('email',values.email)
+  localStorage.setItem('phone',values.phone)
+  // setFormValues([formdata])
+
+
+
+
+  // <Link to="category"/>
+
+ 
 }
+// useEffect(()=>{
+//   localStorage.setItem("formData", formValues)
+// },[formValues])
+// console.log(typeof formValues);
+
 
 
 
@@ -59,31 +95,8 @@ const validate= values=>{
               initialValues,
               onSubmit,
               validate
-             
-             
-           
-
-
-
             })
-            // console.log(formik.to);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            // console.log(formik.to)
   return (
     <div className="flex-row-8" style={{backgroundColor:'black'}} >
       <div id={styles.superApp} className=" flex justify-center" >Super app</div>
@@ -174,7 +187,7 @@ const validate= values=>{
 </div>
 <div className='flex  items-center justify-center ' style={{marginTop:'40px'}}>
 
-  <button type='submit' className={styles.signup} >Sign Up</button>
+  <button type='submit' className={styles.signup}>Sign Up</button>
 
 
 </div>

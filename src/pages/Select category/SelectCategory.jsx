@@ -9,32 +9,52 @@ import styles from './selectCategory.module.css'
 
 
 function SelectCategory() {
- 
-  const getDataFromLs=()=>{
-    const data=localStorage.getItem('Value')
-    if(data){
-      return JSON.parse(data);
-    }else{
-      return []
-    }
+  
+  const[output,setOutput]=useState([])
+
+
+
+  const handleDelete=(i)=>{
+    const deleteVal=[...output]
+    deleteVal.splice(i,1)
+    setOutput(deleteVal)
   }
 
 
 
+ 
+  // const getDataFromLs=()=>{
+  //   const data=localStorage.getItem('Value')
+  //   if(data){
+  //     return JSON.parse(data);
+  //   }else{
+  //     return []
+  //   }
+  // }
 
-  const[output,setOutput]=useState([])
+
+
+
+  
 
   useEffect(() => {
-    localStorage.setItem("Value", output);
-    console.log(output);
+    localStorage.setItem("userChoices", output);
+    console.log( typeof output);
   }, [output]);
   
 
 
+
+
+
+
   return (
-  
-    <div className='grid grid-cols-2'>
-       <div>
+    <div className={styles.finalContainer}>
+
+
+    
+    <div className='grid grid-cols-2 '>
+   <div className={styles.container}>
 
        <div id={styles.superApp} className=" flex justify-center" >Super app</div>
 
@@ -44,18 +64,20 @@ function SelectCategory() {
     </h3>
  </div>
 
- <div className='grid grid-cols-3 gap-4'>
-
-
-
-
-
-
+ <div className='grid grid-cols-3'>
+{console.log(output)}
   {Object.keys(output).length!==0 ?
 
-  
+  output.map((data,i)=>{
+    return(
+      <div>
+        <button className={styles.addedItem}>{data}</button> 
+        <button  className={styles.remove} onClick={()=>{handleDelete(i)}}>x</button>
+        </div>
+    )
+  })
 
-<button className={styles.addedItem}>{output}</button> :null
+:null
 
   }
  </div>
@@ -67,7 +89,7 @@ function SelectCategory() {
 
 
 
-       <div className='flex flex-col-3'>
+       <div className='flex flex-col-3 '>
         <div>
         <Card title={content[0].Header}
        screen={content[0].image}
@@ -216,6 +238,7 @@ function SelectCategory() {
         
        </div>
     
+    </div>
     </div>
   )
 }

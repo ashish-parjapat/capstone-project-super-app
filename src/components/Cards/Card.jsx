@@ -7,8 +7,8 @@ function Card(props) {
 
 
   return (
-
-    <div className={styles.container} >
+<div className={styles.bigContainer}>
+    <div className=''>
       <button type='select' onClick={props.onClicked}>
       
              <div className={styles.card } style={{background:props.background,border:props.border}} >
@@ -32,6 +32,7 @@ function Card(props) {
      
        </button>
 
+    </div>
     </div>
   )
 }
