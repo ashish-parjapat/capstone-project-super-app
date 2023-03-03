@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Home.module.css'
 import UserDetails from '../../components/HomeComponents/LeftHome/FormData/UserDetails'
+import Dateweather from '../../components/HomeComponents/LeftHome/ Left HomeApi calls/Dateweather'
 
 function Home() {
   return (
@@ -11,7 +12,7 @@ function Home() {
                 <UserDetails/>
             </div>
             <div>
-                apis
+                <Dateweather/>
             </div>
 
         </div>

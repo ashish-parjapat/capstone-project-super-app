@@ -1,0 +1,88 @@
+.dateWeather{
+    display: flex;
+    align-items: center;
+    background: #FF4ADE;
+border-radius: 33.428px 33.428px 0px 0px;
+margin-top: 30px;
+margin-left: 40px;
+width: 600px;
+height: 96.77px;
+}
+.date{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 35.06px;
+line-height: 141.69%;
+margin-left: 50px;
+margin-bottom: 25px;
+/* identical to box height, or 78px */
+
+letter-spacing: 0.02em;
+
+color: #FFFFFF;
+}
+.time{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 35.06px;
+line-height: 65px;
+margin-left: 250px;
+margin-bottom: 20px;
+margin-right: 20px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+}
+#weather{
+    
+ 
+    margin-left: 40px;
+    background: #101744;
+border-radius: 15px;
+width: 600px;
+height: 125.77px;
+}
+.temp{
+   
+    margin-top: 20px;
+    margin-left: 10px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24.4616px;
+line-height: 139.69%;
+/* or 62px */
+
+
+color: #FFFFFF;
+}
+.rain{
+    margin-top: 15px;
+    margin-left: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24.4616px;
+    line-height: 139.69%;
+    /* or 62px */
+    
+    
+    color: #FFFFFF;
+}
+.speed{
+    margin-top: 15px;
+    margin-right: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24.4616px;
+    line-height: 139.69%;
+    /* or 62px */
+    
+    
+    color: #FFFFFF;
+}

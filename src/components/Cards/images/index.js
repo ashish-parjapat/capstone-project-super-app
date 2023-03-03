@@ -8,12 +8,16 @@ import tony from './tony.jpg'
 import vijay from './vijay.jpg'
 import fantasy from './fantasy.jpg'
 import cartoon from './cartoon.png'
+import rain from './rain.png'
+import wind from './wind.png'
+import hum from './hum.png'
 export {johnwick,
     alka,
     avatar,conq,
     fantasy,
     rajkumar,srk,tony
     ,vijay,cartoon
+    ,rain,wind,hum
 
 
 
