@@ -5,7 +5,7 @@ import Dateweather from '../../components/HomeComponents/LeftHome/ Left HomeApi 
 import News from '../../components/HomeComponents/LeftHome/Right home Api calls/News'
 function Home() {
   return (
-   <div className='grid grid-cols-10 '>
+   <div className='grid grid-cols-10 ' style={{backgroundColor:'black'}}>
     <div className='col-span-7 '>
         <div className='grid grid-rows-2'>
             <div>

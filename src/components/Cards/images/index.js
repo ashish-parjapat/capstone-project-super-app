@@ -11,13 +11,14 @@ import cartoon from './cartoon.png'
 import rain from './rain.png'
 import wind from './wind.png'
 import hum from './hum.png'
+import profilelogo from './profilelogo.png'
 export {johnwick,
     alka,
     avatar,conq,
     fantasy,
     rajkumar,srk,tony
     ,vijay,cartoon
-    ,rain,wind,hum
+    ,rain,wind,hum,profilelogo
 
 
 
