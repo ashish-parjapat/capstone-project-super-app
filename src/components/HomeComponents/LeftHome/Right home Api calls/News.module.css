@@ -1,0 +1,40 @@
+#Title{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 123.69%;
+/* or 40px */
+
+letter-spacing: 0.02em;
+
+color: white;
+}
+
+.date{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+line-height: 123.69%;
+/* or 40px */
+
+letter-spacing: 0.02em;
+
+color: white;
+}
+
+.disc{
+    /* margin-right: 25px; */
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18.25px;
+line-height: 161.69%;
+/* or 30px */
+
+text-align: justify;
+
+color: #272727;
+
+}

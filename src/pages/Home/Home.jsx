@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Home.module.css'
 import UserDetails from '../../components/HomeComponents/LeftHome/FormData/UserDetails'
 import Dateweather from '../../components/HomeComponents/LeftHome/ Left HomeApi calls/Dateweather'
-
+import News from '../../components/HomeComponents/LeftHome/Right home Api calls/News'
 function Home() {
   return (
    <div className='grid grid-cols-10 '>
@@ -19,8 +19,7 @@ function Home() {
 
     </div>
     <div className='col-span-3'>
-        right
-        hfjjghgjhjj
+        <News/>
 
     </div>
 

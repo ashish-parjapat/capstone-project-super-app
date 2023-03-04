@@ -20,7 +20,7 @@ function Dateweather() {
   axios.get('https://api.weatherapi.com/v1/current.json?key=e1c0e1948126483dab9105314230303&q= New Delhi&aqi=no')
   .then((res)=>{
     // console.log(typeof res.data);
-  console.log(res.data.current)
+  // console.log(res.data.current)
   // return res.data.current.temp_c;
   setTemperature(res.data.current.temp_c)
   setWindSpeed(res.data.current.wind_kph )
@@ -53,7 +53,7 @@ function Dateweather() {
 
     {/* //weather calls */}
 
-    <div id={styles.weather} className='flex space-x-40'>
+    <div id={styles.weather} className='flex space-x-24'>
 
     <div className={styles.rain}>
       <img src={rain} />
