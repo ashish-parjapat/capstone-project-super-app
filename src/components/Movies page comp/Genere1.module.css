@@ -1,0 +1,26 @@
+.row_poster{
+    /* background-color: black; */
+    /* border-radius: 9.15886px; */
+     object-fit: contain; 
+     width: 100%; 
+    max-height: 200px;
+    margin-right: 10px;
+    transition: transform 450ms;
+    /* margin-bottom: 10px; */
+  
+
+
+}
+
+.row_poster:hover{
+    transform: scale(1.08);
+}
+.row_posters{
+ display: flex; 
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;  
+}
+.row_posters::-webkit-scrollbar{
+    display: none;
+}

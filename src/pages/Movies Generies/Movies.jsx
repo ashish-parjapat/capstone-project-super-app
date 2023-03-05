@@ -1,33 +1,42 @@
 import React from 'react'
 import Header from '../../components/Movies page comp/Header'
 import styles from './Movies.module.css'
-import axios from 'axios'
+import Genere1 from '../../components/Movies page comp/Genere1'
+
 
 function Movies() {
  
+  const userChoice=localStorage.getItem('userChoices')
+  const choiceArray=userChoice.split(',')
 
-    const options = {
-        method: 'GET',
-        url: 'https://netflix-unofficial.p.rapidapi.com/api/genres',
-        headers: {
-          'X-RapidAPI-Key': 'a83a90da1bmshe6dfa649df65c66p132660jsn0d63469fb8c8',
-          'X-RapidAPI-Host': 'netflix-unofficial.p.rapidapi.com'
-        }
-      };
-      
-      axios.request(options).then(function (response) {
-          console.log(response.data);
-      }).catch(function (error) {
-          console.error(error);
-      });
-
+    
   return (
-    <div>
+    <>
+  
+    <div style={{backgroundColor:'black'}}>
         <Header/>
+        </div>
+     <div style={{backgroundColor:'black'}}>
+      <span>{choiceArray[0]}</span>
+     <Genere1/>
+     </div>
+     
+     <div style={{backgroundColor:'black'}}>
+      <span>{choiceArray[1]}</span>
+     <Genere1/>
+     </div>
+     
+     <div style={{backgroundColor:'black'}}>
+      <span>{choiceArray[2]}</span>
+     <Genere1/>
+     </div>
+     
+      
+   
 
 
 
-    </div>
+        </>
   )
 }
 

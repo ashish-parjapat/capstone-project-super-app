@@ -60,3 +60,14 @@ height: 40px;
     width: 100%;
     height: 100%;
 }
+.nextPage{
+    background: #72DB73;
+    border-radius: 33px;
+    width: 120px;
+height: 40px;
+margin-top: 35px;
+margin-left: 47px;
+/* left: 439px;
+top: 75px; */
+color: #ffff;
+}

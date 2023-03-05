@@ -3,12 +3,20 @@ import { json } from 'react-router-dom'
 import Card from '../../components/Cards/Card'
 import content from '../../components/Cards/contents'
 import styles from './selectCategory.module.css'
+import { useNavigate } from 'react-router-dom'
 
 
 
 
 
 function SelectCategory() {
+  const navigate=useNavigate()
+const homePage=()=>{
+  if(Object.keys(output).length!=0){
+    navigate("/home")
+  }
+}
+
   
   const[output,setOutput]=useState([])
 
@@ -233,10 +241,13 @@ function SelectCategory() {
        }}
 
        />
+
+<button className={styles.nextPage} onClick={homePage} >Next Page</button>
         </div>
       
         
        </div>
+      
     
     </div>
     </div>

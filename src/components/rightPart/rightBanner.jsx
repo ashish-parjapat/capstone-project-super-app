@@ -1,10 +1,11 @@
 import React,{useEffect,useState} from 'react'
 import{Formik, useFormik} from 'formik'
 import styles from "./right.module.css"
-import {BrowserRouter,Routes,Route, NavLink, Link} from "react-router-dom"
+import {Link, NavLink,useNavigate} from "react-router-dom"
+
 
 function RightBanner() {
-
+  const navigate=useNavigate()
   const getDataFromLs=()=>{
     const data=localStorage.getItem('formData')
     if(data){
@@ -44,11 +45,11 @@ const[formValues,setFormValues]=useState([])
   localStorage.setItem('email',values.email)
   localStorage.setItem('phone',values.phone)
   // setFormValues([formdata])
+  navigate("/category")
 
 
 
-
-  // <Link to="category"/>
+ 
 
  
 }
@@ -57,7 +58,10 @@ const[formValues,setFormValues]=useState([])
 // },[formValues])
 // console.log(typeof formValues);
 
-
+// const categoryPage=()=>{
+//   // <Link to='/category'/>
+ 
+// }
 
 
 const validate= values=>{
@@ -187,7 +191,7 @@ const validate= values=>{
 </div>
 <div className='flex  items-center justify-center ' style={{marginTop:'40px'}}>
 
-  <button type='submit' className={styles.signup}>Sign Up</button>
+  <button type='submit' className={styles.signup}  > Sign Up</button>
 
 
 </div>

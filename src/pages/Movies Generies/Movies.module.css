@@ -1,3 +1,23 @@
-*{
+/* *{
     background-color: black;
+} */
+/* .genere1{
+    display: flex;
+    /* align-items: ; */
+/* .main{
+    height: 100%;
+    width: 100%;
+} */
+
+span{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 139.69%;
+/* identical to box height, or 42px */
+
+letter-spacing: 0.02em;
+
+color: #878787;
 }
