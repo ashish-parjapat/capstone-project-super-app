@@ -103,7 +103,7 @@ const validate= values=>{
             // console.log(formik.to)
   return (
     <div className="flex-row-8" style={{backgroundColor:'black'}} >
-      <div id={styles.superApp} className=" flex justify-center" >Super app</div>
+      <div id={styles.superApp} className=" flex justify-center" >Pikashow</div>
       <div className=" flex justify-center message" id={styles.message}>Create your new account</div>
       <div className='flex col-span-3 gap-4 justify-center ' id= {styles.emailgoogle}>
         <div  >
